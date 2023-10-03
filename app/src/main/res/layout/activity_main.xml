@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/et_search_style"
-        android:drawableStart="@drawable/search"
+        android:drawableStart="@drawable/search_icon"
         android:drawablePadding="8dp"
         android:fontFamily="@font/montserrat_600"
         android:hint="@string/search_hint"
