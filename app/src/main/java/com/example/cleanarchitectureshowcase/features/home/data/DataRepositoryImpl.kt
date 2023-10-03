@@ -17,4 +17,9 @@ class DataRepositoryImpl(
             importantDataForDomain = "topSecret"
         )
     }
+
+    override suspend fun getStocks(): List<StocksDTO> {
+        val response = api.getStocks()
+        return response
+    }
 }
