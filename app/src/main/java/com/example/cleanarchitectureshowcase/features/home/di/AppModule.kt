@@ -10,6 +10,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -20,7 +21,8 @@ object AppModule {
     @Singleton
     fun provideServerDataApi(): ServerDataApi {
         return Retrofit.Builder()
-            .baseUrl("https://blabla")
+            .baseUrl(ServerDataApi.BASE_URL) //!! Можно ли так делать? С точки зрения архитектуры, прикреплять интерфейс
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ServerDataApi::class.java)
     }
